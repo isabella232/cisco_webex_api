@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require "cisco_webex_api"
+require "cisco_webex/api"
+require "pry"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
