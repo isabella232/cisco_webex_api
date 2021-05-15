@@ -6,6 +6,10 @@ RSpec.describe CiscoWebex::Api::Client do
   end
 
   describe "#meetings" do
-    it ""
+    it "delegates to the Meeting class" do
+      client = CiscoWebex::Api::Client.new(access_token: "1234")
+
+      expect(client.meetings).to be_instance_of(CiscoWebex::Api::Meeting)
+    end
   end
 end
