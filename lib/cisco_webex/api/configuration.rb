@@ -2,6 +2,7 @@
 
 module CiscoWebex
   module Api
+    # The Configuration utilized throughout the gem
     class Configuration
       attr_accessor :base_uri
 
