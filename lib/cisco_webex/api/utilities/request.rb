@@ -17,7 +17,8 @@ module CiscoWebex
         #
         # @return [Response]
         def post(uri:, **body_params)
-          request_object = Net::HTTP::Post.new(URI.parse(uri)).tap do |request|
+          uri = URI.parse(uri)
+          request_object = Net::HTTP::Post.new(uri).tap do |request|
             request["Content-Type"] = "application/json"
             request["Authorization"] = "Bearer #{@access_token}"
             request.body = {
@@ -36,7 +37,8 @@ module CiscoWebex
         #
         # @return [Response]
         def put(uri:, **body_params)
-          request_object = Net::HTTP::Put.new(URI.parse(uri)).tap do |request|
+          uri = URI.parse(uri)
+          request_object = Net::HTTP::Put.new(uri).tap do |request|
             request["Content-Type"] = "application/json"
             request["Authorization"] = "Bearer #{@access_token}"
             request.body = {
@@ -55,7 +57,8 @@ module CiscoWebex
         #
         # @return [Response]
         def delete(uri:, **body_params)
-          request_object = Net::HTTP::Delete.new(URI.parse(uri)).tap do |request|
+          uri = URI.parse(uri)
+          request_object = Net::HTTP::Delete.new(uri).tap do |request|
             request["Content-Type"] = "application/json"
             request["Authorization"] = "Bearer #{@access_token}"
             request.body = {
