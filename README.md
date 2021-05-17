@@ -1,8 +1,9 @@
 # CiscoWebexApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cisco_webex_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+CiscoWebex::Api is a simple wrapper around the WebEx api.
 
-TODO: Delete this and the text above, and describe your gem
+[![Rubocop](https://github.com/lessonly/cisco_webex_api/actions/workflows/rubocop.yml/badge.svg)](https://github.com/lessonly/cisco_webex_api/actions/workflows/rubocop.yml)
+[![RSpec](https://github.com/lessonly/cisco_webex_api/actions/workflows/rspec.yml/badge.svg)](https://github.com/lessonly/cisco_webex_api/actions/workflows/rspec.yml)
 
 ## Installation
 
@@ -22,7 +23,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can interact with the Cisco WebEx api using the built-in client class.
+
+``` ruby
+CiscoWebex::Api::Client.new(access_token: "xxxxx")
+```
+
+The client has access to api specific endpoints through delegated method calls.
+
+``` ruby
+client = CiscoWebex::Api::Client.new(access_token: "xxxxx")
+client.meetings.create(...)
+```
+
+You may also directly interact with the api directly using the underlying class.
+
+``` ruby
+meeting = CiscoWebex::Api::Meeting.new(access_token: "xxxxx")
+meeting.create(...)
+```
 
 ## Development
 
