@@ -3,7 +3,7 @@
 CiscoWebex::Api is a simple wrapper around the WebEx api.
 
 [![Rubocop](https://github.com/lessonly/cisco_webex_api/actions/workflows/rubocop.yml/badge.svg)](https://github.com/lessonly/cisco_webex_api/actions/workflows/rubocop.yml)
-[![RSpec](https://github.com/lessonly/cisco_webex_api/actions/workflows/rspec.yml/badge.svg)](https://github.com/lessonly/cisco_webex_api/actions/workflows/rspec.yml)
+[![RSpec](https://github.com/lessonly/cisco_webex_api/actions/workflows/rspec.yml/badge.svg?event=push)](https://github.com/lessonly/cisco_webex_api/actions/workflows/rspec.yml)
 
 ## Installation
 
