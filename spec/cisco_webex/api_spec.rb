@@ -11,11 +11,7 @@ RSpec.describe CiscoWebex::Api do
         config.base_uri = "http://www.google.com"
       end
 
-      meeting = CiscoWebex::Api::Meeting.new(access_token: 1234)
-
-      expect(Net::HTTP).to receive(:post).with(URI("http://www.google.com/meetings"), anything, anything)
-
-      meeting.create(title: nil, start_date_time: nil, end_date_time: nil)
+      expect(CiscoWebex::Api.configuration.base_uri).to eq "http://www.google.com"
     end
   end
 
