@@ -1,4 +1,4 @@
-name: Ruby
+name: RSpec
 
 on: [push,pull_request]
 
@@ -12,8 +12,6 @@ jobs:
       with:
         ruby-version: 2.6.5
         bundler-cache: true
-    - name: Run the default task
+    - name: Run RSpec
       run: |
-        gem install bundler -v 2.2.11
-        bundle install
-        bundle exec rake
+        bundle exec rspec
