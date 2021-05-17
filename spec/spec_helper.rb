@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "cisco_webex/api"
-require 'webmock/rspec'
+require "webmock/rspec"
 require "pry"
 
 RSpec.configure do |config|
